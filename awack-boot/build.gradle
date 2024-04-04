@@ -1,0 +1,9 @@
+jar.enabled = false
+bootJar.enabled = true
+
+dependencies {
+    implementation project(':awack-domain')
+    implementation project(':awack-service')
+    implementation project(':awack-api')
+    implementation project(':awack-auth')
+}

@@ -1,0 +1,11 @@
+jar.enabled = true
+bootJar.enabled = false
+
+dependencies {
+    implementation project(':awack-domain')
+    implementation project(':awack-service')
+    implementation project(':awack-auth')
+
+    //implementation 'org.springframework.boot:spring-boot-starter-hateoas'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+}
