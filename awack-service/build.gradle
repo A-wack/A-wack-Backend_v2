@@ -3,7 +3,14 @@ bootJar.enabled = false
 
 dependencies {
     implementation project(':awack-domain')
+    implementation project(':awack-common')
+    implementation project(':awack-auth')
+
+    implementation 'org.springframework.boot:spring-boot-starter-mail'
 
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    testImplementation 'org.springframework.security:spring-security-test'
 }
