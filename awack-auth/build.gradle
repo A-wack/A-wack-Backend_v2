@@ -2,6 +2,9 @@ jar.enabled = true
 bootJar.enabled = false
 
 dependencies {
+    implementation project(':awack-common')
+    implementation project(':awack-domain')
+
     implementation 'org.springframework.boot:spring-boot-starter-security'
     testImplementation 'org.springframework.security:spring-security-test'
 
