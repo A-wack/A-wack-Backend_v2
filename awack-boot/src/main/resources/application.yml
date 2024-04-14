@@ -1,0 +1,59 @@
+spring:
+  threads:
+# virtual threads
+    virtual:
+      enabled: true
+# daemon threads
+  main:
+    keep-alive: true
+
+  datasource:
+    driver-class-name: ${MYSQL_DRIVER}
+    url: ${MYSQL_URL}
+    username: ${MYSQL_USER}
+    password: ${MYSQL_PW}
+
+  jpa:
+    open-in-view: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+      dialect: org.hibernate.dialect.MySQL8InnoDBDialect
+
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+
+# redis
+  data:
+    redis:
+      host: ${REDIS_HOST}
+      port: ${REDIS_PORT}
+      password: ${REDIS_PW}
+
+# mail
+mail:
+  email: ${ADMIN_MAIL}
+  password: ${ADMIN_PW}
+  auth: true
+  starttls-required: true
+  starttls-enable: true
+  socket-factory-class: javax.net.ssl.SSLSocketFactory
+  socket-factory-fallback: false
+  port: 465
+
+server:
+  error:
+    include-stacktrace: always
+
+awack:
+  security:
+    secret: ${SEC_SECRET}
+    issuer: ${SEC_ISSUER}
+    expiration: ${SEC_EXPIRATION}
+    algorithm: ${SEC_ALGORITHM}
