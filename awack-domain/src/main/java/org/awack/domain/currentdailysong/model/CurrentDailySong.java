@@ -15,6 +15,9 @@ public class CurrentDailySong {
     @Indexed
     private String url;
 
+    protected CurrentDailySong(Long id, String url) {
+    }
+
     public static CurrentDailySong of(Long id, String url) {
         return new CurrentDailySong(id, url);
     }
