@@ -1,0 +1,7 @@
+awack:
+  security:
+    secret: ${SEC_SECRET}
+    issuer: ${SEC_ISSUER}
+    expiration: ${SEC_EXPIRATION}
+    notBefore: ${SEC_NOT_BEFORE}
+    algorithm: ${SEC_ALGORITHM}
