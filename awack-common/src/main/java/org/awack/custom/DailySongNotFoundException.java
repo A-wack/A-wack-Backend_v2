@@ -3,11 +3,11 @@ package org.awack.custom;
 import org.awack.error.ErrorCode;
 import org.awack.error.exception.CustomException;
 
-public class SongRequestNotFoundException extends CustomException {
+public class DailySongNotFoundException extends CustomException {
     public static final CustomException EXCEPTION
-            = new SongRequestNotFoundException();
+            = new DailySongNotFoundException();
 
-    private SongRequestNotFoundException() {
+    private DailySongNotFoundException() {
         super(ErrorCode.SONG_NOT_FOUND_BY_ID);
     }
 
