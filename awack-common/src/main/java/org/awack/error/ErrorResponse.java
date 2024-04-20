@@ -21,9 +21,9 @@ public record ErrorResponse(
     }
 
     public static ResponseEntity<ErrorResponse> of(MethodArgumentNotValidException e) {
-        FieldError fieldError = e.getBindingResult().getFieldError();
-        int status = HttpStatus.BAD_REQUEST.value();
-        String message = fieldError != null ? fieldError.getDefaultMessage() : "Bad Request";
+        final FieldError fieldError = e.getBindingResult().getFieldError();
+        final int status = HttpStatus.BAD_REQUEST.value();
+        final String message = fieldError != null ? fieldError.getDefaultMessage() : "Bad Request";
 
         return ResponseEntity
                 .status(status)
