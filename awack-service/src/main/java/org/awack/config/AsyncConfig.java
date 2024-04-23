@@ -28,7 +28,7 @@ public class AsyncConfig implements AsyncConfigurer, DisposableBean {
 
     @Override
     public Executor getAsyncExecutor() {
-        executorService = Executors.newFixedThreadPool(20);
+        executorService = Executors.newVirtualThreadPerTaskExecutor();
         virtualThreadExecutor = new VirtualThreadExecutor(":awack-VT:");
 
         return task -> executorService.execute(
