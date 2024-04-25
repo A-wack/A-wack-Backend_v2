@@ -24,7 +24,7 @@ public enum ErrorCode {
     // 407 Proxy Authentication Required
     // 408 Request Timeout
     // 409 Conflict
-    USER_EXISTS_BY_EMAIL(409, "해당 이메일로 가입된 유저가 이미 존재합니다.");
+    USER_ALREADY_EXISTS_BY_EMAIL(409, "해당 이메일로 가입된 유저가 이미 존재합니다."),
     // 410 Gone
     // 411 Length Required
     // 412 Precondition Failed
@@ -47,6 +47,7 @@ public enum ErrorCode {
     // 431 Request Header Fields Too Large
     // 451 Unavailable For Legal Reasons
     // 500 Internal Server Error
+    FAILED_SEND_MAIL(500, "메일 전송 실패");
 
     private final int status;
     private final String message;
