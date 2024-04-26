@@ -11,6 +11,7 @@ import org.awack.domain.user.port.FindUserPort;
 import org.awack.security.component.Tokenizer;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import reactor.core.publisher.Flux;
 
 @Service
 @RequiredArgsConstructor
@@ -41,8 +42,10 @@ public class CreateTokenService implements CreateTokenUseCase {
         );
     }
 
+    private static final String JWT_PREFIX = "Bearer ";
+
     private String tokenParse(String token) {
-        if (token.startsWith("Bearer ")) {
+        if (token.startsWith(JWT_PREFIX)) {
             return token.substring(7);
         }
         return token;
