@@ -8,7 +8,7 @@ public class UserAlreadyExistsByEmailException extends CustomException {
             = new UserAlreadyExistsByEmailException();
 
     private UserAlreadyExistsByEmailException() {
-        super(ErrorCode.USER_EXISTS_BY_EMAIL);
+        super(ErrorCode.USER_ALREADY_EXISTS_BY_EMAIL);
     }
 
 }
