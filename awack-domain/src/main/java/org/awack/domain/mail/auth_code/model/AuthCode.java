@@ -1,6 +1,5 @@
-package org.awack.domain.mail.authcode.model;
+package org.awack.domain.mail.auth_code.model;
 
-import lombok.Builder;
 import lombok.Getter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.redis.core.RedisHash;

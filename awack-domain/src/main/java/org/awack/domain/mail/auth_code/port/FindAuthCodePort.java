@@ -1,6 +1,6 @@
-package org.awack.domain.mail.authcode.port;
+package org.awack.domain.mail.auth_code.port;
 
-import org.awack.domain.mail.authcode.model.AuthCode;
+import org.awack.domain.mail.auth_code.model.AuthCode;
 
 import java.util.Optional;
 

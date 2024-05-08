@@ -1,11 +1,11 @@
-package org.awack.domain.mail.authcode.adapter;
+package org.awack.domain.mail.auth_code.adapter;
 
 import lombok.RequiredArgsConstructor;
-import org.awack.domain.mail.authcode.dao.AuthCodeRepository;
-import org.awack.domain.mail.authcode.model.AuthCode;
-import org.awack.domain.mail.authcode.port.DeleteAuthCodePort;
-import org.awack.domain.mail.authcode.port.FindAuthCodePort;
-import org.awack.domain.mail.authcode.port.SaveAuthCodePort;
+import org.awack.domain.mail.auth_code.dao.AuthCodeRepository;
+import org.awack.domain.mail.auth_code.model.AuthCode;
+import org.awack.domain.mail.auth_code.port.DeleteAuthCodePort;
+import org.awack.domain.mail.auth_code.port.FindAuthCodePort;
+import org.awack.domain.mail.auth_code.port.SaveAuthCodePort;
 import org.springframework.stereotype.Component;
 
 import java.util.Optional;

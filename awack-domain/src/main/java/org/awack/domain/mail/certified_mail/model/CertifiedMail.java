@@ -1,4 +1,4 @@
-package org.awack.domain.mail.certifiedmail.model;
+package org.awack.domain.mail.certified_mail.model;
 
 import lombok.Getter;
 import org.springframework.data.annotation.Id;
