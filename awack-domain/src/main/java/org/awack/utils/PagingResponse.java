@@ -1,4 +1,4 @@
-package org.awack.domain.utils;
+package org.awack.utils;
 
 import java.util.List;
 
