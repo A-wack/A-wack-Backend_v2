@@ -21,13 +21,13 @@ public class SecurityTokenFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request,
                                     HttpServletResponse response,
                                     FilterChain filterChain) throws ServletException, IOException {
-        String token = tokenizer.extractToken(request.getHeader(HttpHeaders.AUTHORIZATION));
+        var token = tokenizer.extractToken(request.getHeader(HttpHeaders.AUTHORIZATION));
 
         if (token != null && tokenizer.validate(token)) {
-            Authentication authentication = tokenizer.getAuthentication(token);
+            var authentication = tokenizer.getAuthentication(token);
             SecurityContextHolder.getContext().setAuthentication(authentication);
         }
-
+    
         filterChain.doFilter(request, response);
     }
 
