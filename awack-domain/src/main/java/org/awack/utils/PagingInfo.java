@@ -18,5 +18,4 @@ public record PagingInfo(
                 size()
         );
     }
-
 }

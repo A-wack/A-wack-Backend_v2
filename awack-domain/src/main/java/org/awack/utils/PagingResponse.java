@@ -11,5 +11,4 @@ public record PagingResponse<T>(
     public static <T> PagingResponse<T> of(List<T> data, Long totalElements, Integer totalPages) {
         return new PagingResponse<>(data, totalElements, totalPages);
     }
-
 }
