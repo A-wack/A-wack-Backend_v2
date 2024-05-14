@@ -20,9 +20,11 @@ public class AsyncConfig implements AsyncConfigurer, DisposableBean {
     public void destroy() throws Exception {
         if (executorService != null) {
             executorService.shutdown();
+            //executorService.close();
         }
         if (virtualThreadExecutor != null) {
             virtualThreadExecutor.shutdown();
+            //virtualThreadExecutor.close();
         }
     }
 
