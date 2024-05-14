@@ -49,6 +49,6 @@ public enum ErrorCode {
     // 500 Internal Server Error
     FAILED_SEND_MAIL(500, "메일 전송 실패");
 
-    private final int status;
+    private final Integer status;
     private final String message;
 }

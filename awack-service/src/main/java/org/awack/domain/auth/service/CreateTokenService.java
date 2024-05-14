@@ -53,10 +53,10 @@ public class CreateTokenService implements CreateTokenUseCase {
 
     private void validate(final CreateTokenRequest request) {
         final UserEntity user = findUserPort.findByEmail(request.email())
-                .orElseThrow(() -> UserNotFoundException.EXCEPTION);
+                .orElseThrow(UserNotFoundException::new);
 
         if (!passwordEncoder.matches(request.password(), user.getPassword())) {
-            throw PasswordNotMatchesException.EXCEPTION;
+            throw new PasswordNotMatchesException();
         }
     }
 
