@@ -14,8 +14,8 @@ public record PagingInfo(
 
     public Pageable pageable() {
         return PageRequest.of(
-                page(),
-                size()
+                page,
+                size
         );
     }
 }
